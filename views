@@ -1,0 +1,8 @@
+<script>start("c:\\Users\\MAZIKO\\Documents\\school\\assessement\\JS\\views\\");</script>
+<script>onHasParentDirectory();</script>
+<script>addRow("admin.ejs","admin.ejs",0,616,"616 B",1746111552,"5/1/25, 4:59:12 PM");</script>
+<script>addRow("Dashboard.ejs","Dashboard.ejs",0,2809,"2.7 kB",1746112859,"5/1/25, 5:20:59 PM");</script>
+<script>addRow("home.ejs","home.ejs",0,606,"606 B",1746111554,"5/1/25, 4:59:14 PM");</script>
+<script>addRow("login.ejs","login.ejs",0,623,"623 B",1746110182,"5/1/25, 4:36:22 PM");</script>
+<script>addRow("newproducts.ejs","newproducts.ejs",0,1616,"1.6 kB",1746113891,"5/1/25, 5:38:11 PM");</script>
+<script>addRow("products.ejs","products.ejs",0,1165,"1.1 kB",1746115064,"5/1/25, 5:57:44 PM");</script>
