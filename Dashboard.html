@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Charts</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    canvas {
+      max-width: 800px;
+      max-height: 400px;  
+      margin: 20px auto;
+      display: block;
+    }
+    h2 {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h2>Charts</h2>
+  <canvas id="barChart" width="800"></canvas>
+  <canvas id="pieChart" width="400"></canvas>
+
+  <script>
+    // Simulated server data
+    const serverData = [
+      { label: 'electronics', value: 1 },
+      { label: 'beverages', value: 1 },
+      { label: 'household', value: 1 },
+      { label: 'toiletries', value: 1 },
+      { label: 'clothing', value: 2 },
+      { label: 'stationary', value: 1 },
+      { label: 'automotive', value: 4 },
+      { label: 'hardware', value: 1 }
+    ];
+
+    const labels = serverData.map(item => item.label);
+    const values = serverData.map(item => item.value);
+
+    const colors = [
+      '#4bc0c0', '#ff9f40', '#e74c3c', '#36a2eb',
+      '#2ecc71', '#f1c40f', '#9b59b6', '#f78fb3'
+    ];
+
+    // Bar Chart
+    new Chart(document.getElementById('barChart').getContext('2d'), {
+      type: 'bar',
+      data: {
+        labels: labels,
+        datasets: [{
+          label: '', // Remove label to avoid clutter
+          data: values,
+          backgroundColor: colors
+        }]
+      },
+      options: {
+        plugins: {
+          title: {
+            display: false,
+            text: 'Products by Categories'
+          },
+          legend: {
+            display: false // No legend needed for bar chart
+          }
+        },
+        responsive: false,
+        scales: {
+          x: {
+            ticks: {
+              autoSkip: false,
+              maxRotation: 0,
+              minRotation: 0
+            }
+          },
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+    // Pie Chart
+    new Chart(document.getElementById('pieChart').getContext('2d'), {
+      type: 'pie',
+      data: {
+        labels: labels,
+        datasets: [{
+          label: 'Product Categories',
+          data: values,
+          backgroundColor: colors
+        }]
+      },
+      options: {
+        responsive: false,
+        maintainAspectRatio: false,
+        plugins: {
+          title: {
+            display: false,
+            text: 'Product Categories'
+          },
+          legend: {
+            position: 'bottom',
+            onclick: null
+          }
+        },
+        layout:{
+            padding: 20
+        }
+      }
+    });
+  </script>
+</body>
+</html>

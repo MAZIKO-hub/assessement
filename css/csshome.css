@@ -1,0 +1,20 @@
+nav{
+    margin: 0%;
+    padding: 0%;
+    background-color: #000080;
+    overflow: hidden;
+}
+nav a {
+    display: block;
+    color: azure;
+    text-align: center;
+    padding: 14px 16px;
+    float: left;
+}
+nav a:hover{
+    background-color: #24244b;
+    color: rgb(236, 232, 232);
+}
+.logout{
+    float: right;
+}

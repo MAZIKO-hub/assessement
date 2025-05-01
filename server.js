@@ -17,7 +17,7 @@ app.use(session({
 
 // Route: Login Page
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'login.html'));
+  res.sendFile(path.join(__dirname, '/login.html'));
 });
 
 // Route: Handle Login
@@ -30,10 +30,15 @@ app.post('/login', (req, res) => {
     (userType === 'standard' && username === 'user' && password === 'abcd')
   ) {
     req.session.userType = userType;
-    res.redirect('/home.html');
+    res.redirect("/home");
   } else {
     res.send('Invalid credentials. <a href="/">Try again</a>');
   }
+});
+
+// Route: Home Page
+app.get("/home", (req, res) => {
+  res.sendFile(path.join(__dirname, "/home.html"));
 });
 
 // Route: Dashboard Access Control
