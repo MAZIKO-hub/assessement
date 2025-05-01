@@ -9,10 +9,15 @@ const port = 3000;
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname));
+const MemoryStore = require('memorystore')(session);
+
 app.use(session({
   secret: 'mysecretkey',
   resave: false,
-  saveUninitialized: true
+  saveUninitialized: true,
+  store: new MemoryStore({
+    checkPeriod: 86400000 // Prune expired entries every 24h
+  })
 }));
 
 // Route: Login Page
