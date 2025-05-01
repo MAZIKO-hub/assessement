@@ -1,0 +1,60 @@
+nav{
+    margin: 0%;
+    padding: 0%;
+    background-color: #000080;
+    overflow: hidden;
+}
+nav a {
+    display: block;
+    color: azure;
+    text-align: center;
+    padding: 14px 16px;
+    float: left;
+}
+nav a:hover{
+    background-color: #24244b;
+    color: rgb(236, 232, 232);
+}
+.logout{
+    float: right;
+}
+.btn{
+    background-color: #3379b3; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+form>input{
+    width: 300px;
+    padding: 12px 20px;
+    margin: 0;
+    line-height: 1rem;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 16px;
+}
+select{
+    width: 300px;
+    padding: 12px 20px;
+    margin: 0;
+    line-height: 1rem;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 16px;
+}
+form>label{
+    font-size: 20px;
+    margin: 0px;
+    display: block;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/products.css">
+</head>
+<body>
+    <div class="topbar">
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="products.html">New products</a>
+            <a href="Dashboard.html">Dashboard</a>
+            <a href="logout.html" class="logout">logout</a>
+        </nav>
+
+    </div>
+   <form action="">
+    <h2>New product</h2><br>
+    <label for="product">product name</label><br>
+    <input type="text" id="product" name="product" placeholder="product name"><br><br>
+    <label for="category">category</label><br>
+    <select id="category" name="category">
+        <option value="electronics">Electronics</option>
+        <option value="beverages">beverages</option>
+        <option value="homehold">Household</option>
+        <option value="toiletries">Toiletries</option>
+        <option value="clothing">Clothing</option>
+        <option value="stationary">Stationary</option>
+        <option value="automotive">Automotive</option>
+        <option value="hardware">Hardware</option>
+    </select><br><br>
+    <label for="quantity">Quantity</label><br>
+    <input type="number" id="quantity" name="quantity" placeholder="Quantity"><br><br>
+    <label for="price">Price</label><br>
+    <input type="number" id="price" name="price" placeholder="Price"><br><br>
+    <button class="btn" type="submit">save</button>
+   </form>
+
+</body>
+</html>
